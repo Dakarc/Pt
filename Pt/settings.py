@@ -57,6 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         # 'DIRS': [],
+        # 'DIRS': [BASE_DIR+"/templates",],
         'DIRS': [os.path.join(BASE_DIR,"templates")],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -83,16 +84,16 @@ WSGI_APPLICATION = 'Pt.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test123',
-        'USER': 'test123',
-        'PASSWORD': 'pyJh6h7EB2pkJWeC',
-        'HOST': '127.0.0.1',
-        'PORT': '3306'
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'test123',
+#         'USER': 'test123',
+#         'PASSWORD': 'pyJh6h7EB2pkJWeC',
+#         'HOST': 'localhost',
+#         'PORT': '3306'
+#     }
+# }
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -133,4 +134,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "static_new/")
+# STATIC_ROOT = os.path.join(BASE_DIR, "static_new/")

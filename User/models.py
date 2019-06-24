@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class TddsQuestions(models.Model):
+class Tddsquestions(models.Model):
     """问题表"""
     question_id = models.BigIntegerField()             #问题ID
     question_desc = models.CharField(max_length=255,blank=False)    #问题内容
@@ -11,7 +11,7 @@ class TddsQuestions(models.Model):
     created_time = models.DateTimeField()                           #创建时间
 
 
-class TddsAnswers(models.Model):
+class Tddsanswers(models.Model):
     """答案表"""
     answer_id = models.BigIntegerField()               #答案ID
     question_id = models.BigIntegerField()             #所属问题ID
