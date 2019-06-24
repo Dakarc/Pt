@@ -24,8 +24,9 @@ SECRET_KEY = 'pow@5fu^nr9^=x7x2%#^6an-xqs7tms=wpd^ed4nk$(deqhz)@'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+# DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*',]
 
 
 # Application definition
@@ -85,9 +86,9 @@ WSGI_APPLICATION = 'Pt.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'test',
-        'USER': 'root',
-        'PASSWORD': 'root',
+        'NAME': 'test123',
+        'USER': 'test123',
+        'PASSWORD': 'pyJh6h7EB2pkJWeC',
         'HOST': '127.0.0.1',
         'PORT': '3306'
     }
@@ -132,3 +133,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static_new/")
