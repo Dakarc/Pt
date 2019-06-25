@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -16,8 +17,9 @@ def search(request):
     return render(request=request, template_name='User/index.html')
 
 #测试
-def test(request):
-    return render(request=request, template_name='User/test.html')
+def test(request,num):
+    return HttpResponse(num)
+    # return render(request=request, template_name='User/test.html')
 
 def theinput(request):
     """

@@ -16,5 +16,5 @@ urlpatterns = [
     url(r'^$',views.search_answer,name="search_answer"),
 
     #自己测试
-    url(r'^test/$', views.test, name="test"),
+    url(r'^test(\d+)$', views.test, name="test"),
 ]

@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls), #原带的
     # path(r'', include('User.urls',namespace="User")),
     # url(r'^api/',include('User.urls',namespace='User',app_name='User')),#视频里教的,报错,多第三参数
-    url(r'',include('User.urls',namespace='User')),
+    url(r'^',include('User.urls',namespace='User')),
 ]
