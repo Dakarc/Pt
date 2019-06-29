@@ -2,21 +2,28 @@ from django.db import models
 
 # Create your models here.
 
-class Tddsquestions(models.Model):
+class TddsQuestions(models.Model):
     """问题表"""
     question_id = models.BigIntegerField()             #问题ID
     question_desc = models.CharField(max_length=255,blank=False)    #问题内容
     question_tags = models.CharField(max_length=255,blank=True)     #问题标签
     question_next = models.CharField(max_length=255,blank=True)     #不知道
     created_time = models.DateTimeField()                           #创建时间
+    def __str__(self):
+        #返回问题内容
+        return self.question_desc
 
 
-class Tddsanswers(models.Model):
+class TddsAnswers(models.Model):
     """答案表"""
     answer_id = models.BigIntegerField()               #答案ID
     question_id = models.BigIntegerField()             #所属问题ID
     answer_desc = models.CharField(max_length=255,blank=False)      #答案内容
     created_time = models.DateTimeField()                           # 创建时间
+    ques = models.ForeignKey('TddsQuestions',on_delete=models.CASCADE,)       #外键
+    def __str__(self):
+        #返回问题内容
+        return self.answer_desc
 
 
 """
